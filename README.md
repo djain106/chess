@@ -1,1 +1,1 @@
-A simpel version of chess written in python.
+A simple version of chess written in python.
