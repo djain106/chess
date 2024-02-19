@@ -1,7 +1,10 @@
 """Pieces that are played/used in a chess game."""
 
-from constants import Color
+from classes import constants
 from typing import Sequence
+
+# Alises.
+_Color = constants.Color
 
 
 class BasePiece:
@@ -9,7 +12,7 @@ class BasePiece:
     PIECE_NAME = 'BasePiece'
     _ICONS = {}
 
-    def __init__(self, x: int = 0, y: int = 0, color: Color = Color.WHITE) -> None:
+    def __init__(self, x: int = 0, y: int = 0, color: _Color = _Color.WHITE) -> None:
         """Initializes a chess piece
 
         Parameters
@@ -44,7 +47,7 @@ class BasePiece:
         """Sets the y coordinate of the piece."""
         self._y = y
 
-    def color(self) -> Color:
+    def color(self) -> _Color:
         """Gets teh color of the piece."""
         return self._color
 
@@ -58,40 +61,40 @@ class BasePiece:
 class Pawn(BasePiece):
     """Pawn piece on a chess board."""
     PIECE_NAME = 'Pawn'
-    _ICONS = {Color.WHITE: '♙', Color.BLACK: '♟︎'}
+    _ICONS = {_Color.WHITE: '♙', _Color.BLACK: '♟︎'}
     ...
 
 
 class Rook(BasePiece):
     """Rook piece on a chess board."""
     PIECE_NAME = 'Rook'
-    _ICONS = {Color.WHITE: '♖', Color.BLACK: '♜'}
+    _ICONS = {_Color.WHITE: '♖', _Color.BLACK: '♜'}
     ...
 
 
 class Bishop(BasePiece):
     """Bishop piece on a chess board."""
     PIECE_NAME = 'Bishop'
-    _ICONS = {Color.WHITE: '♗', Color.BLACK: '♝'}
+    _ICONS = {_Color.WHITE: '♗', _Color.BLACK: '♝'}
     ...
 
 
 class Knight(BasePiece):
     """Knight piece on a chess board."""
     PIECE_NAME = 'Knight'
-    _ICONS = {Color.WHITE: '♘', Color.BLACK: '♞'}
+    _ICONS = {_Color.WHITE: '♘', _Color.BLACK: '♞'}
     ...
 
 
 class King(BasePiece):
     """King piece on a chess board."""
     PIECE_NAME = 'King'
-    _ICONS = {Color.WHITE: '♔', Color.BLACK: '♚'}
+    _ICONS = {_Color.WHITE: '♔', _Color.BLACK: '♚'}
     ...
 
 
 class Queen(BasePiece):
     """Queen piece on a chesss board."""
     PIECE_NAME = 'Queen'
-    _ICONS = {Color.WHITE: '♕', Color.BLACK: '♛'}
+    _ICONS = {_Color.WHITE: '♕', _Color.BLACK: '♛'}
     ...
