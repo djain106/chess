@@ -48,6 +48,9 @@ class BoardSquare:
     def __str__(self) -> str:
         return f'BoardSquare(x: {self._x}, y: {self._y}, color: {self._color.value}, piece: {self._piece})'
 
+    def __repr__(self) -> str:
+        return f'BoardSquare(x: {self._x}, y: {self._y}, color: {self._color.value}, piece: {self._piece})'
+
     def color(self) -> _Color:
         return self._color
 
@@ -77,12 +80,16 @@ class Board:
             self.load_board()
 
     def __str__(self) -> str:
+        return str(self._board)
+
+    def display_board(self) -> None:
+        """Displays the game board in its current state."""
         board_str = ''
         for i in range(len(self._board)):
             for j in range(len(self._board[i])):
                 board_str += self._board[i][j].get_display() + _EMPTY_STRING
             board_str += '\n'
-        return board_str
+        print(board_str)
 
     def load_board(self, path='./games/default.csv') -> None:
         """Loads pieces onto a board.

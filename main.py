@@ -5,4 +5,4 @@ from classes.board import Board
 
 # Basic game testing.
 board = Board(load=True)
-print(board)
+board.display_board()
