@@ -61,40 +61,40 @@ class BasePiece:
 class Pawn(BasePiece):
     """Pawn piece on a chess board."""
     PIECE_NAME = 'Pawn'
-    _ICONS = {_Color.WHITE: '♙', _Color.BLACK: '♟︎'}
+    _ICONS = {_Color.BLACK: '♙', _Color.WHITE: '♟︎'}
     ...
 
 
 class Rook(BasePiece):
     """Rook piece on a chess board."""
     PIECE_NAME = 'Rook'
-    _ICONS = {_Color.WHITE: '♖', _Color.BLACK: '♜'}
+    _ICONS = {_Color.BLACK: '♖', _Color.WHITE: '♜'}
     ...
 
 
 class Bishop(BasePiece):
     """Bishop piece on a chess board."""
     PIECE_NAME = 'Bishop'
-    _ICONS = {_Color.WHITE: '♗', _Color.BLACK: '♝'}
+    _ICONS = {_Color.BLACK: '♗', _Color.WHITE: '♝'}
     ...
 
 
 class Knight(BasePiece):
     """Knight piece on a chess board."""
     PIECE_NAME = 'Knight'
-    _ICONS = {_Color.WHITE: '♘', _Color.BLACK: '♞'}
+    _ICONS = {_Color.BLACK: '♘', _Color.WHITE: '♞'}
     ...
 
 
 class King(BasePiece):
     """King piece on a chess board."""
     PIECE_NAME = 'King'
-    _ICONS = {_Color.WHITE: '♔', _Color.BLACK: '♚'}
+    _ICONS = {_Color.BLACK: '♔', _Color.WHITE: '♚'}
     ...
 
 
 class Queen(BasePiece):
     """Queen piece on a chesss board."""
     PIECE_NAME = 'Queen'
-    _ICONS = {_Color.WHITE: '♕', _Color.BLACK: '♛'}
+    _ICONS = {_Color.BLACK: '♕', _Color.WHITE: '♛'}
     ...

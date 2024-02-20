@@ -1,8 +1,7 @@
 """File to run and play the chess game."""
 
-from classes.board import Board
+from classes.game import ChessGame
 
 
 # Basic game testing.
-board = Board(load=True)
-board.display_board()
+game = ChessGame()
